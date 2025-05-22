@@ -1,0 +1,62 @@
+body {
+  background-color: #000; /* Black background */
+  margin: 0; /* Remove default margin */
+  font-family: Arial, sans-serif; /* Optional: set a default font */
+}
+/* Main container for all rows */
+#container {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  gap: 20px;
+  width: 95%;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Each row holds a set of models side by side */
+.row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+  max-width: 1600px;
+}
+
+/* Model viewer containers */
+#model-container,
+#wagonr-container,
+#audi-container,
+#fortuner-container,
+#nissan-container{
+  flex: 1;
+  min-width: 300px; /* prevent collapse on small screens */
+  height: 400px;
+  background-color: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 255, 255, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+#model-container:hover,
+#wagonr-container:hover,
+#audi-container:hover,
+#fortuner-container:hover,
+#nissan-container:hover {
+  transform: scale(1.01);
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.2);
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+h1 {
+  color: white;
+  text-align: center;
+  font-size: 20px; /* Adjust the size if necessary */
+}
